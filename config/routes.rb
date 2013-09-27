@@ -32,7 +32,7 @@ Alchemy::Engine.routes.draw do
     :controllers => {
       :sessions => 'alchemy/user_sessions'
     },
-    :skip => [:sessions, :passwords] # skipping Devise default routes.
+    :skip => [:sessions, :passwords, :omniauth_callbacks] # skipping Devise default routes.
   )
 
   get '/admin/signup' => 'users#new', :as => :signup
